@@ -1,4 +1,5 @@
 (function($) {
+
 	$.fn.uploadFile = function(params)	{
 		// we create an object with the default value
 		var default_value = {
@@ -12,13 +13,15 @@
 		//we replace our default value with the parameters
 		params = $.extend(default_value, params);
 		//we load the plugin for the progress bar
-		var $topLoader = $("#topLoader").percentageLoader({
-			width: params.width_progressBar,
-			height: params.height_progressBar,
-			onProgressUpdate : function(val) {
-				$topLoader.setValue(Math.round(val * 100.0));
-			}
-		});
+		if (params.progressBar == true)	{
+			var $topLoader = $("#topLoader").percentageLoader({
+				width: params.width_progressBar,
+				height: params.height_progressBar,
+				onProgressUpdate : function(val) {
+					$topLoader.setValue(Math.round(val * 100.0));
+				}
+			});
+		}
 		//we check if the url is defined else the plugin will doesn't work
 		if (params.url == undefined || params.url == "")	{
 			alert("The param Url is not defined");
