@@ -1,7 +1,7 @@
 upload-file
 ===========
 
-This is an uploader of file write in javascript and html5 which don't need to change your php.ini for the big file. This jQuery plugin cut the file and send him at your server in AJAX.
+This is a file uploader written in javascript and html5 which doesn't need to change your php.ini for the big file. This jQuery plugin cut the file and send him at your server in AJAX.
 
 For use it :
 
