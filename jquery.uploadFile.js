@@ -85,6 +85,8 @@
 						tab_blob.push(files[0].webkitSlice(i, i + j));
 					else if (files[0].mozSlice)
 						tab_blob.push(files[0].mozSlice(i, i + j));
+					else if(files[0].slice){
+                        			tab_blob.push(files[0].slice(i, i + j));
 				}
 				//we initialize our progress bar
 				if (params.progressBar == true)	{
